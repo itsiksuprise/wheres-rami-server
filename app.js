@@ -7,6 +7,10 @@ app.use(cors());
 
 let status = "לא";
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 app.get("/status", (req, res) => {
   res.send({
     status: getStatus(),
